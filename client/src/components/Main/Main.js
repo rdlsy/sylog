@@ -57,7 +57,7 @@ function Main() {
                   </Typography>
                   <p className={classes.text}>
                     안녕하세요. 프론트엔드 개발자 이세영입니다.<br />
-                    빠르게 변화하는 웹 트렌드를 쫓아 계발하며<span className={classes.br} />
+                    빠르게 변화하는 웹 트렌드를 쫓아 개발하며<span className={classes.br} />
                     그 자리에 만족하기 보다 항상 발전하길 바라고<span className={classes.br} />
                     혼자가 아닌 함께했을 때 모두가 빛날 수 있는<span className={classes.br} />
                     늘 겸손하고 소통하는 그런 개발자가 되고 싶습니다.

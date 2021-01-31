@@ -13,6 +13,21 @@ import { useStyles } from './style';
 import { Link } from 'react-router-dom';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 
+const ElevationScroll = (props) => {
+
+  const { children, window } = props;
+  
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0
+  });
+}
+
 export default function Header({ user, props, onLogout }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -34,21 +49,6 @@ export default function Header({ user, props, onLogout }) {
   const handleClick = () => {
     setAnchorEl(null);
     onLogout();
-  }
-
-  const ElevationScroll = (props) => {
-
-    const { children, window } = props;
-    
-    const trigger = useScrollTrigger({
-      disableHysteresis: true,
-      threshold: 0,
-      target: window ? window() : undefined,
-    });
-  
-    return React.cloneElement(children, {
-      elevation: trigger ? 4 : 0
-    });
   }
 
   return (
