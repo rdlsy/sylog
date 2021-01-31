@@ -49,7 +49,7 @@ export default function Register({ onSubmit }) {
           name: values.name,
           email: values.email,
           password: values.password,
-          image: `http://gravatar.com/avatar/${moment().unix()}?d=identicon`
+          image: `https://gravatar.com/avatar/${moment().unix()}?d=identicon`
         });
         enqueueSnackbar('회원가입 되었습니다.', { 
           variant: 'success',
