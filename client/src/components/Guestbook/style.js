@@ -34,7 +34,12 @@ export const useStyles = makeStyles((theme) => ({
     width: '100%',
     resize: 'none',
     padding: theme.spacing(2),
-    borderColor: 'rgba(0, 0, 0, 0.12)'
+    borderColor: 'rgba(0, 0, 0, 0.12)',
+    appearance: 'none',
+    borderRadius: '0',
+    '&:focus': {
+      outline: 'none',
+    }
   },
   paper2: {
     position: 'relative',
