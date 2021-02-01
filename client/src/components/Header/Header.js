@@ -67,7 +67,7 @@ export default function Header({ user, props, onLogout }) {
           <Typography className={classes.title} variant="h6" noWrap>
             SYLOG
           </Typography>
-          {!user ? (
+          {user.userData && !user.userData.isAuth ? (
             <Button component={Link} to="/login" color="inherit">Login</Button>
           ) :
           (

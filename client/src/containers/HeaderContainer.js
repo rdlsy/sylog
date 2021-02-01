@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import { auth, logoutUser } from '../_action/user_action';
@@ -7,8 +7,8 @@ import { useSnackbar } from 'notistack';
 
 function HeaderContainer(props) {
   const dispatch = useDispatch();
-  const user = window.localStorage.getItem('userId');
   const { enqueueSnackbar } = useSnackbar();
+  const user = useSelector(state => state.user);
 
   const onLogout = useCallback(() => {
     dispatch(logoutUser())

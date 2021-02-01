@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Login from '../components/Login/Login';
 import { auth, loginUser } from '../_action/user_action';
 
 function LoginContainer(props) {
   const dispatch = useDispatch();
-  const user = window.localStorage.getItem('userId');
+  // const user = window.localStorage.getItem('userId');
+  const user = useSelector(state => state.user);
 
   const onSubmit = useCallback(({ email, password, rememberEmail }) => {
     dispatch(loginUser({ email, password }))
@@ -28,7 +29,7 @@ function LoginContainer(props) {
   },[dispatch, props.history]);
 
   useEffect(() => {
-    if (user) {
+    if (user.userData && user.userData.isAuth) {
       props.history.push('/');
     }
   }, [props.history, user]);
