@@ -12,6 +12,7 @@ import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducer';
 import { ThemeProvider } from '@material-ui/core';
 import { theme } from './theme';
+import ScrollToTop from './scrollTop';
 
 const store = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
 
@@ -19,6 +20,7 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Provider store={store(Reducer, composeWithDevTools())}>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </Provider>
