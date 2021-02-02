@@ -65,7 +65,7 @@ function SingleComment({ comment, userId, postId, handleClickPopup, onSubmitRepl
           <Typography variant="h6" component="h1">
             {comment.writer.name}
             <Typography component="span" variant="body2" color="textSecondary">
-              {moment(comment.createdAt).format("YYYY-MM-DD")}
+              {moment(comment.createdAt).format("YYYY-MM-DD HH:mm:ss")}
             </Typography>
           </Typography>
           <Typography style={{ 'marginTop': '10px', 'whiteSpace': 'pre' }}>{comment.message}</Typography>
