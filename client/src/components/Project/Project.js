@@ -191,7 +191,7 @@ export default function Work() {
                   }
                   {
                     card.code &&
-                    <Button size="small" color="primary" onClick={() => window.open(card.link, '_blank')}>
+                    <Button size="small" color="primary" onClick={() => window.open(card.code, '_blank')}>
                       Code
                     </Button>
                   }
