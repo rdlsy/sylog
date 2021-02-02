@@ -2,7 +2,7 @@
 
 ### 기술 스택
 - Server - Node.js, Express, Mongoose
-- Client - React, redux, redux-thunk, axios, react-router, styled-components
+- Client - Material-ui, React, redux, redux-thunk, redux-promise, axios, formik
 
 
 
