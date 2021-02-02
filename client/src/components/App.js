@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import HeaderContainer from '../containers/HeaderContainer';
-import MainPage from '../pages/MainPage';
+import AboutPage from '../pages/AboutPage';
 import ProjectPage from '../pages/ProjectPage';
 import GuestbookPage from '../pages/GuestbookPage';
 import RegisterPage from '../pages/RegisterPage';
@@ -44,8 +44,8 @@ function App() {
         <HeaderContainer open={open} setOpen={setOpen} />
         <Nav open={open} setOpen={setOpen} />
         <Switch>
-          <Route exact path="/" component={MainPage}></Route>
-          <Route exact path="/project" component={ProjectPage}></Route>
+          <Route exact path="/" component={ProjectPage}></Route>
+          <Route exact path="/about" component={AboutPage}></Route>
           <Route exact path="/guestbook" component={GuestbookPage}></Route>
           <Route exact path="/register" component={RegisterPage}></Route>
           <Route exact path="/login" component={LoginPage}></Route>

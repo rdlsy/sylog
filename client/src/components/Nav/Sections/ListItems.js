@@ -8,8 +8,8 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import { Link } from 'react-router-dom';
 
 const menu = [
-  { title: 'Home', url: '/', icon: <HomeIcon />},
-  { title: 'Project', url: '/project', icon: <AssignmentIcon /> },
+  { title: 'project', url: '/', icon: <HomeIcon />},
+  { title: 'about', url: '/about', icon: <AssignmentIcon /> },
   { title: 'Guestbook', url: '/guestbook', icon: <PeopleIcon /> }
 ];
 

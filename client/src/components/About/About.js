@@ -11,7 +11,7 @@ import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-ic
 import { DiJqueryLogo, DiMongodb } from "react-icons/di";
 import { FaNode, FaTrello, FaGithub, FaSlack } from "react-icons/fa";
 
-function Main() {
+function About() {
   const classes = useStyles();
   const [active, setActive] = useState(false);
   const [page, setPage] = useState({
@@ -144,4 +144,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default About;
