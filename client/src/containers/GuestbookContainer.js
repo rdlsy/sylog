@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Guestbook from '../components/Guestbook/Guestbook';
 import { removePost, getPosts, insertPost } from '../_action/post_action';
 import { useSnackbar } from 'notistack';
@@ -8,7 +8,7 @@ function GuestbookContainer() {
   const dispatch = useDispatch();
   const [posts, setPosts] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
-  const user = window.localStorage.getItem('userId');
+  const user = useSelector(state => state.user);
 
   const onRequest = useCallback(() => {
     dispatch(getPosts())

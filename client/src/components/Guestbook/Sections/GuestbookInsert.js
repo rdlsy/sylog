@@ -64,24 +64,14 @@ export default function GuestbookInsert({ onSubmit, user }) {
               className={classes.textarea}
               rowsMin={5}
               rowsMax={5}
-              placeholder={user ? '방명록을 남겨주세요!' : '로그인을 해야 방명록을 등록할 수 있습니다.'}
+              placeholder={user.userData && !user.userData.isAuth ? '로그인을 해야 방명록을 등록할 수 있습니다.' : '방명록을 남겨주세요!'}
               onChange={handleChange}
               ref={currentTextarea}
               value={message}
             />
           </Grid>
         </Grid>
-        {user ?
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="secondary"
-            className={classes.submit}
-            onClick={handleSubmit}
-          >
-            등록
-          </Button> :
+        {user.userData && !user.userData.isAuth ?
           <Button
             type="submit"
             fullWidth
@@ -93,6 +83,17 @@ export default function GuestbookInsert({ onSubmit, user }) {
           >
             등록
           </Button>
+          :
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="secondary"
+            className={classes.submit}
+            onClick={handleSubmit}
+          >
+            등록
+          </Button> 
         }
       </form>
     </div>
