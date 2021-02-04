@@ -24,6 +24,7 @@ const portfolio = [
     title: 'Todo List',
     description: 'React Content API 반응형웹',
     image: '/portpolio/project/3/pc.png',
+    link: 'https://rdlsy.github.io/todo-list/',
     code: 'https://github.com/rdlsy/todo-list',
     type: 'project'
   },
