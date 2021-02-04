@@ -4,11 +4,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { useStyles } from './style';
-import { Avatar, List, ListItem, Typography } from '@material-ui/core';
+import { Avatar, List, ListItem, ListItemText, Typography } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
-import { DiJqueryLogo, DiMongodb } from "react-icons/di";
+import { DiJqueryLogo, DiMongodb, DiPhotoshop, DiVisualstudio } from "react-icons/di";
 import { FaNode, FaTrello, FaGithub, FaSlack } from "react-icons/fa";
 
 function About() {
@@ -81,36 +81,43 @@ function About() {
                     <Avatar className={classes.icons} style={{ backgroundColor: '#d76537' }}>
                       <IoLogoHtml5 />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="HTML5" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#4b9bd4' }}>
                       <IoLogoCss3 />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="CSS3" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#f2db5d' }}>
                       <IoLogoJavascript style={{ color: '#2e2e2c' }} />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="Javascript" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#2a69a9' }}>
                       <DiJqueryLogo style={{ color: '#8dcef1' }}/>
                     </Avatar>
+                    <ListItemText className={classes.name} primary="JQuery" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#282c34' }}>
                       <IoLogoReact style={{ color: '#81d7f7' }} />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="React" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#8dba39' }}>
                       <FaNode style={{ color: '#333' }} />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="Node.js" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#3e3021' }}>
                       <DiMongodb  style={{ color: '#6ca453' }} />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="MongoDB" />
                   </ListItem>
                 </List>
               </Grid>
@@ -123,16 +130,19 @@ function About() {
                     <Avatar className={classes.icons} style={{ backgroundColor: '#25292e' }}>
                       <FaGithub />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="Github" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#2f6fa8' }}>
                       <FaTrello />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="Trello" />
                   </ListItem>
                   <ListItem>
                     <Avatar className={classes.icons} style={{ backgroundColor: '#34163c' }}>
                       <FaSlack />
                     </Avatar>
+                    <ListItemText className={classes.name} primary="Slack" />
                   </ListItem>
                 </List>
               </Grid>

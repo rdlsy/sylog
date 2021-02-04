@@ -218,7 +218,8 @@ export const useStyles = makeStyles((theme) => ({
     '& li': {
       width: 'auto',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      flexDirection: 'column'
     },
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'flex-start',
@@ -238,5 +239,8 @@ export const useStyles = makeStyles((theme) => ({
     '& svg': {
       fontSize: '3rem'
     },
+  },
+  name: {
+    marginTop: '10px !important'
   }
 }));
