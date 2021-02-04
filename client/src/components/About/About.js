@@ -8,7 +8,7 @@ import { Avatar, List, ListItem, ListItemText, Typography } from '@material-ui/c
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
-import { DiJqueryLogo, DiMongodb, DiPhotoshop, DiVisualstudio } from "react-icons/di";
+import { DiJqueryLogo, DiMongodb } from "react-icons/di";
 import { FaNode, FaTrello, FaGithub, FaSlack } from "react-icons/fa";
 
 function About() {
