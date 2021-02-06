@@ -15,7 +15,7 @@ import { useStyles } from './style';
 const portfolio = [
   {
     title: '먹스타그램',
-    description: 'MERN Stack 반응형웹',
+    description: '사진 또는 동영상을 업로드해 공유할 수 있어요',
     image: '/portpolio/project/4/pc.png',
     code: 'https://github.com/rdlsy/mukstagram',
     type: 'project',
@@ -23,7 +23,7 @@ const portfolio = [
   },
   {
     title: 'Todo List',
-    description: 'React Content API 반응형웹',
+    description: 'React Content API을 활용한 Todo List',
     image: '/portpolio/project/3/pc.png',
     link: 'https://rdlsy.github.io/todo-list/',
     code: 'https://github.com/rdlsy/todo-list',
@@ -32,7 +32,7 @@ const portfolio = [
   },
   {
     title: '세영N영화',
-    description: 'React 반응형웹',
+    description: '실시간 영화 순위와 영화 제목으로 영화를 검색해보세요',
     image: '/portpolio/project/2/pc.png',
     link: 'https://rdlsy.github.io/search_movie/',
     code: 'https://github.com/rdlsy/search_movie',
@@ -41,7 +41,7 @@ const portfolio = [
   },
   {
     title: '사진 검색 웹 사이트',
-    description: 'Javascript ES6 반응형웹',
+    description: '원하는 사진을 검색해보세요',
     image: '/portpolio/project/1/pc.png',
     link: 'https://rdlsy.github.io/search_photo/',
     code: 'https://github.com/rdlsy/search_photo',
