@@ -1,3 +1,4 @@
+import { pink } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
@@ -49,5 +50,25 @@ export const useStyles = makeStyles((theme) => ({
   },
   active: {
     fontWeight: 'bold'
+  },
+  skills: {
+    '& ul': {
+      display: 'flex',
+      flexFlow: 'wrap',
+      paddingBottom: '0',
+      '& li': {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 'auto',
+        padding: '5px',
+        marginTop: '5px',
+        marginRight: '5px',
+        border: `1px solid ${pink[400]}`,
+        borderRadius: '8px',
+        whiteSpace: 'nowrap',
+        color: pink[400]
+      }
+    }
   }
 }));
