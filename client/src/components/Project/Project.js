@@ -16,10 +16,19 @@ const portfolio = [
   {
     title: '먹스타그램',
     description: '사진 또는 동영상을 업로드해 공유할 수 있어요',
-    image: '/portpolio/project/4/pc.png',
+    image: '/portpolio/project/5/pc.png',
     code: 'https://github.com/rdlsy/mukstagram',
     type: 'project',
     skills: ['React', 'Redux', 'MongoDB', 'Node.js', 'Express', 'Material UI'],
+  },
+  {
+    title: 'SYSHOP',
+    description: '원하는 상품을 구경 후 장바구니 담아보세요',
+    image: '/portpolio/project/4/pc.png',
+    link: 'https://rdlsy.github.io/syshop/',
+    code: 'https://github.com/rdlsy/syshop',
+    type: 'project',
+    skills: ['React', 'Redux', 'Redux Persist', 'Styled-components'],
   },
   {
     title: 'Todo List',
