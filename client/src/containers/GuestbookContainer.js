@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Guestbook from '../components/Guestbook/Guestbook';
 import { removePost, getPosts, insertPost } from '../_action/post_action';
 import { useSnackbar } from 'notistack';
@@ -8,7 +8,7 @@ function GuestbookContainer() {
   const dispatch = useDispatch();
   const [posts, setPosts] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
-  const user = useSelector(state => state.user);
+  const user = window.localStorage.getItem('userId');
 
   const onRequest = useCallback(() => {
     dispatch(getPosts())
@@ -28,8 +28,8 @@ function GuestbookContainer() {
       })
   }, [dispatch, enqueueSnackbar]);
 
-  const onInsert = useCallback(({ writer, message }) => {
-    dispatch(insertPost({ writer, message }))
+  const onInsert = useCallback(({ writer, message, privacy }) => {
+    dispatch(insertPost({ writer, message, privacy }))
       .then(response => {
         if (response.payload.success) {
           enqueueSnackbar('방명록이 등록되었습니다.', { 

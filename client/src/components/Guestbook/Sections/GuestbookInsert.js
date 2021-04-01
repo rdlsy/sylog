@@ -10,7 +10,7 @@ export default function GuestbookInsert({ onSubmit, user }) {
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
   const [message, setMessage] = useState('')
-  // const [privacy, setPrivacy] = useState(0);
+  const [privacy, setPrivacy] = useState(0);
   const currentTextarea = useRef();
 
   // const handleChangeChk = (e) => {
@@ -36,7 +36,8 @@ export default function GuestbookInsert({ onSubmit, user }) {
     } else {
       onSubmit({
         writer: user,
-        message: message
+        message: message,
+        privacy: privacy
       });
       setMessage('');
       setPrivacy(0)
