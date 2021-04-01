@@ -28,8 +28,8 @@ function GuestbookContainer() {
       })
   }, [dispatch, enqueueSnackbar]);
 
-  const onInsert = useCallback(({ writer, message, privacy }) => {
-    dispatch(insertPost({ writer, message, privacy }))
+  const onInsert = useCallback(({ writer, message }) => {
+    dispatch(insertPost({ writer, message }))
       .then(response => {
         if (response.payload.success) {
           enqueueSnackbar('방명록이 등록되었습니다.', { 
